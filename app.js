@@ -1,6 +1,7 @@
 let gameSeq = [];
 let userSeq = [];
-
+let maxScore=0;
+let highScore=document.queryselector('#HighScore');
 let btns = ["blue", "green", "yellow", "red"];
 
 let started = false;
@@ -54,6 +55,8 @@ function checkAns(indx) {
     }
   } else {
     h2.innerHTML = `Game over! your score is<b> ${level}</b> </br> press any key to start.`;
+     maxScore=Math.max(`${level}`,maxScore);
+    highScore.innerHTML=`Highscore:`+ maxScore;
     document.querySelector("body").style.backgroundColor="red";
     reset();
   }
@@ -82,7 +85,4 @@ function reset() {
   userSeq = [];
   level = 0;
   started = false;
-}
-function hidden(){
-    
 }
