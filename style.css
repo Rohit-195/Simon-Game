@@ -2,6 +2,9 @@ body{
     text-align: center;
     background-color: #B2FFB233;
 }
+.game-container{
+    height:100vh;
+}
 .btn-container{
     display: flex;
     justify-content: center;
@@ -33,4 +36,11 @@ body{
 }
 .userflash{
     background-color: blueviolet;
+}
+.instructions{
+    text-align: left;
+    margin-left: -2px;
+}
+#instruction-heading{
+    margin-left: 10px;
 }
